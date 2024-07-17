@@ -1,0 +1,46 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "category": "peliculas",
+            "image": "https://es.web.img3.acsta.net/c_310_420/pictures/14/03/26/13/26/223510.jpg",
+            "title": "La Naranja Mecánica",
+            "link": "https://www.youtube.com/embed/m7aWsXmBrHM?si=Qsn5LVPNRHvlP32G"
+        },
+        {
+            "id": 2,
+            "category": "peliculas",
+            "image": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg",
+            "title": "Forrest Gump",
+            "link": "https://www.youtube.com/embed/Cyh1LpxnaxI?si=J9Mo3lavezteO6XS"
+        },
+        {
+            "id": 3,
+            "category": "series",
+            "image": "https://www.bolsamania.com/seriesadictos/wp-content/uploads/2017/01/penny-dreadful-canceled-renewed-1-e1484939741808.jpg",
+            "title": "Penny Dreadful",
+            "link": "https://www.youtube.com/embed/YFXHfEqMcis?si=xT2X1EnLBA8bs0lq"
+        },
+        {
+            "id": 4,
+            "category": "series",
+            "image": "https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg",
+            "title": "Breaking Bad",
+            "link": "https://www.youtube.com/embed/HhesaQXLuRY?si=k77DxHqsR0ONB13o"
+        },
+        {
+            "id": 5,
+            "category": "documentales",
+            "image": "https://es.web.img3.acsta.net/c_310_420/pictures/17/08/25/23/02/185122.jpg",
+            "title": "Foo Fighters, Back and Forth",
+            "link": "https://www.youtube.com/embed/JH2KA9-qZKo?si=EIb8A1tzU13pcJ8y"
+        },
+        {
+            "id": 6,
+            "category": "documentales",
+            "image": "https://geekzilla.tech/home/wp-content/uploads/2022/12/image-655.png",
+            "title": "Pamela Anderson",
+            "link": "https://www.youtube.com/embed/fPInm7bFwWA?si=FA94fAvea2fhoPIi"
+        }
+    ]
+}

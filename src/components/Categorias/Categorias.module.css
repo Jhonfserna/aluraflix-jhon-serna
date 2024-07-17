@@ -1,0 +1,57 @@
+.categoriasContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  width: 100%;
+}
+.categoria {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.categoriaTitle {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  position: relative; /* Posicionamiento relativo para crear capas */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2), /* Sombra interior oscura */
+              0 2px 5px rgba(0, 0, 0, 0.4); /* Sombra inferior para profundidad */
+}
+
+.peliculas {
+  background-color: var(--color-peliculas);
+}
+
+.series {
+  background-color: var(--color-series);
+}
+
+.documentales {
+  background-color: var(--color-documentales);
+}
+
+.tarjetasContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}

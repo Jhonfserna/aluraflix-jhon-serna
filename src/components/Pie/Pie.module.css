@@ -1,0 +1,17 @@
+.pie {
+    background-color: var(--negro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pie img {
+    color: var(--color-gray-light);
+    font-size: 20px;
+    padding: 10px 0px;
+}
+

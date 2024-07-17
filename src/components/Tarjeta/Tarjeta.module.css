@@ -1,0 +1,92 @@
+.card {
+  background-color: #050505;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* width: calc(33.333% - 20px); */
+  width: calc(25% - 20px);
+  /* 3 tarjetas por fila con 20px de gap */
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 4px solid transparent;
+}
+
+.peliculas {
+  border-color: var(--color-peliculas);
+}
+
+.series {
+  border-color: var(--color-series);
+}
+
+.documentales {
+  border-color: var(--color-documentales);
+}
+
+.card__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card__imageContainer {
+  width: 100%;
+  padding-top: 150%; 
+  position: relative;
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card__title {
+  padding: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.card__actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  
+}
+
+.card__actionButton {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: var(--font);
+  font-size: 1.2em;
+}
+
+.card__actionButton i {
+  margin-right: 5px;
+}
+
+
+.icon {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+@media (max-width: 768px) { 
+  .card {
+    width: 60%; 
+    margin: 0 auto; 
+  }
+}
