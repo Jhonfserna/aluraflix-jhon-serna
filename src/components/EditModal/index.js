@@ -1,12 +1,16 @@
-// src/components/EditModal/EditModal.jsx
+// // src/components/EditModal/EditModal.jsx
 import React, { useState } from 'react';
 import styles from './EditModal.module.css';
 
+
 const EditModal = ({ show, onClose, onSave, card }) => {
-    const [title, setTitle] = useState(card.title);
-    const [category, setCategory] = useState(card.category);
-    const [image, setImage] = useState(card.image);
-    const [link, setLink] = useState(card.link);  // Cambiado de video a link
+    console.log('Card:', card); // Verifica que `card` esté definido y tenga propiedades válidas
+    console.log('Show:', show); // Verifica que `show` sea un booleano
+
+    const [title, setTitle] = useState(card?.title || '');
+    const [category, setCategory] = useState(card?.category || '');
+    const [image, setImage] = useState(card?.image || '');
+    const [link, setLink] = useState(card?.link || '');
 
     const handleSave = () => {
         onSave({
@@ -14,7 +18,7 @@ const EditModal = ({ show, onClose, onSave, card }) => {
             title,
             category,
             image,
-            link,  // Cambiado de video a link
+            link,
         });
         onClose(); // Cerrar el modal después de guardar
     };
@@ -23,7 +27,7 @@ const EditModal = ({ show, onClose, onSave, card }) => {
         setTitle('');
         setCategory('');
         setImage('');
-        setLink('');  // Cambiado de video a link
+        setLink('');
     };
 
     if (!show) return null;
@@ -87,5 +91,4 @@ const EditModal = ({ show, onClose, onSave, card }) => {
 };
 
 export default EditModal;
-
 

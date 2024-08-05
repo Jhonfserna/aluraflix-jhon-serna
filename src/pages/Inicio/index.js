@@ -4,10 +4,11 @@ import Pie from 'components/Pie';
 import Categorias from 'components/Categorias';
 import Banner from 'components/Banner';
 
-function Inicio({ cards }) {
-    const peliculas = cards.filter(card => card.category === 'peliculas');
-    const series = cards.filter(card => card.category === 'series');
-    const documentales = cards.filter(card => card.category === 'documentales');
+function Inicio({ cards = [] }) {  // Default to empty array if cards is not provided
+    // Verifica que cards sea un array
+    const peliculas = Array.isArray(cards) ? cards.filter(card => card.category === 'peliculas') : [];
+    const series = Array.isArray(cards) ? cards.filter(card => card.category === 'series') : [];
+    const documentales = Array.isArray(cards) ? cards.filter(card => card.category === 'documentales') : [];
 
     const handleEdit = (id) => {
         console.log('Edit clicked', id);
@@ -34,6 +35,7 @@ function Inicio({ cards }) {
 }
 
 export default Inicio;
+
 
 
 

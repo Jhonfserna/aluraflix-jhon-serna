@@ -1,18 +1,22 @@
-// src/components/Categorias/Categorias.jsx
+
 import React, { useState, useEffect } from 'react';
 import Tarjeta from '../Tarjeta/index';
 import styles from './Categorias.module.css';
 import data from '../../data/db.json';
+import { useSearch } from "../../contexts/dataContext"; // IMPORTACIÓN CONTEXTO
 
 const Categorias = () => {
     const [cards, setCards] = useState([]);
   
+    const { dataCards, addDataCard } = useSearch(); // Obtener funciones del contexto
+    console.log("Dato context", dataCards);
+
     useEffect(() => {
-      console.log('Datos JSON:', data); // Verifica qué datos se están importando
-      if (data && Array.isArray(data.cards)) {
-        setCards(data.cards);
+      console.log('Datos JSON:', dataCards); // Verifica qué datos se están importando
+      if (dataCards && Array.isArray(dataCards.cards)) {
+        setCards(dataCards.cards);
       } else {
-        console.error('Error: data.cards no es un array');
+        console.error('Error: dataCard.cards no es un array');
       }
     }, []);
 

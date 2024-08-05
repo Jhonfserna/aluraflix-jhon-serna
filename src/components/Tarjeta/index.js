@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from './Tarjeta.module.css';
 import { FaTrashAlt, FaEdit } from 'react-icons/fa';
-import EditModal from "../EditModal/"; // Asegúrate de importar el componente EditModal correctamente
+import EditModal from "../EditModal/"; 
 
 const Tarjeta = ({ card, onDelete, onSave }) => {
   const [showModal, setShowModal] = useState(false);

@@ -1,32 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useContext  } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cabecera from 'components/Cabecera/Cabecera';
 import Pie from 'components/Pie';
 import styles from './NuevoVideo.module.css';
+import { useSearch } from "../../contexts/dataContext";
 
-function NuevoVideo({ onAddCard }) {
+
+
+
+function NuevoVideo() {
     const [title, setTitle] = useState('');
     const [category, setCategory] = useState('');
     const [image, setImage] = useState('');
     const [link, setLink] = useState('');
-    const navigate = useNavigate();
+    const navigate = useNavigate ();
+
+    const { dataCards, addDataCard } = useSearch(); // Obtener funciones del contexto
+    console.log("Dato context", dataCards);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newCard = {
-            id: Date.now(),
-            title,
-            category,
-            image,
-            link,
-        };
-        onAddCard(newCard);
-        setTitle('');
-        setCategory('');
-        setImage('');
-        setLink('');
-        navigate('/');
-    };
+        const id = Number(dataCards.cards.length + 1);
+        console.log("dato numero", dataCards);
+        addDataCard (
+            {
+                "id": id,
+                "category": category,
+                "image": image,
+                "title": title,
+                "link": link
+            }
+        )
+
+        navigate("/");
+    }
 
     return (
         <>
